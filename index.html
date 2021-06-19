@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Password Generator</title>
+
+  <!-- Boostrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/e1f93e85a2.js" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/e1f93e85a2.js" crossorigin="anonymous"></script>
+
+  <!-- Boostrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <!--Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+</head>
+ 
+         
+<body>
+
+  <div class="mx-auto text-center">
+    <i class="icon fas fa-lock lock fa-2x"></i>
+    <span class = "heading">Password Generator</span>
+  </div>
+
+     <div class="header mx-auto icon-box card card-body h-50 border-0 card-hover h-50 text-center">
+        <em><p class="intro mx-auto icon-box-title">Generate easy to remember and hard to hack passwords.</p></em>
+     </div>
+
+     <strong><h3 class="text-center">GENERATE</h3></strong>
+
+  <div class="form">
+  <!--Name-->
+  <div class="row g-3 align-items-center form">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Enter Your Name</label>
+    </div>
+    <div class="col-auto">
+      <input class="form-control name" id="name" type="text" placeholder="Your Name" aria-label="default input example">
+    </div>
+  </div>
+
+  <!--Birth Date-->
+  <div class="row g-3 align-items-center form">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Enter You Birth Date In DDMM Format</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control" type="number" id="birth-date" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Birth Date In DDMM Format" maxlength = "4" aria-label="default input example">
+    </div>
+  </div>
+
+  <!--Liking-->
+  <div class="row g-3 align-items-center form">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">1 Thing That You Like</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control" type="text" id="liking" placeholder="A Thing That You Like" aria-label="default input example">
+    </div>
+  </div>
+
+  <!--Phone Number-->
+  <div class="row g-3 align-items-center form">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Last 4 Digits Of Your Phone Number</label>
+    </div>
+    <div class="col-auto">
+      <input class="form-control" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" id="phoneNumber" maxlength = "4" placeholder="Last 4 Digits" aria-label="default input example">
+    </div>
+  </div>
+
+   <!--Number Of Passwords-->
+   <div class="row g-3 align-items-center form">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">How Many Passwords Should We Create For You ?</label>
+    </div>
+    <div class="col-auto">
+      <input class="form-control" type="number" id="passNumb" placeholder="Number Of Passwords" aria-label="default input example">
+    </div>
+  </div>
+
+  <!-- Submit Button-->
+  <button type="submit" id="btn" class="btn btn-primary">Submit</button>
+
+  </div>
+
+  <h4 id="resHead"class = "resHead"></h4>
+  <p id="again"class = "again"></p>
+  <p id="result" class = "results"></p>
+
+
+  <script src="logic.js"></script>
+
+</body>
+
+</html>
